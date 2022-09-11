@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import { useEffect, useState } from "react";
 import { getTheme, setTheme } from "../../utils/localStorage";
-
+import { themeDark, themeLight } from "../../themes";
 import {CustomThemeContext} from "./CustomThemeContext";
 
 export const CustomThemeProvider = ({children}) => {
@@ -14,15 +14,16 @@ export const CustomThemeProvider = ({children}) => {
 
     const handleTheme = () => {
         setDark((prev) => {
-        setTheme(!prev);
-        return !prev;
+            const newValue = !prev;
+        setTheme(newValue);
+        return newValue;
     });
 
-    return < CustomThemeContext.Provider value={{isDark, handleTheme}}>
+    return < CustomThemeContext.Provider 
+    value={{theme:isDark ? themeDark: themeLight, handleTheme}}>
         {children}
         </CustomThemeContext.Provider>
 };
-
 
 CustomThemeProvider.PropTypes = {
     children: PropTypes.node,
