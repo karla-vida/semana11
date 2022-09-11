@@ -1,1 +1,1 @@
-export {CustomThemeContext} from "./context/CustomTheme";
+export {CustomThemeContext} from "./CustomThemeContext";

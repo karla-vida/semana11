@@ -1,13 +1,11 @@
-import { useState } from 'react'
-import './App.css'
+import { CustomThemeProvider } from "./context/CustomTheme"
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <div className="App">
-       
-    </div>
+    <CustomThemeProvider>
+       <p>Olá</p>
+    </CustomThemeProvider>
   )
 }
 
