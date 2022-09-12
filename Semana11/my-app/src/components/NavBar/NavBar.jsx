@@ -13,5 +13,4 @@ export const NavBar = ()=> {
         <Button onClick={handleTheme}> Alterar tema </Button>
     </Container>
 );
-
 };

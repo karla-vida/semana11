@@ -1,16 +1,15 @@
 import { ThemeProvider } from 'styled-components';
-import PropTypes from "prop-types";
-import {useCustomTheme} from '../../context';
-import { NavBar } from '../../components/NavBar/NavBar';
+import {PerfilProvider, useCustomTheme} from '../../context';
+import { NavBar, Profile} from '../../components';
+import { GlobalStyle } from "../../themes";
 
-export const AppLayout = ({children})=> {
+export const AppLayout = ()=> {
     const {theme} = useCustomTheme();
     return (<ThemeProvider theme={theme}>
+         <GlobalStyle/> 
         <NavBar/>
-        {children}
+        <PerfilProvider>
+        <Profile/>
+        </PerfilProvider>
         </ThemeProvider>);
 }
-
-AppLayout.propTypes = {
-    children: PropTypes.node,
-};
