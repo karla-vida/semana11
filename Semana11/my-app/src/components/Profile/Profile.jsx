@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import { usePerfil } from "../../context";
+import { Button } from "../Button/Button";
 import {Container} from "./Profile.styles";
 
 export const Profile = (profile) => {
@@ -7,9 +8,9 @@ export const Profile = (profile) => {
     return (
         <Container>
             <p>{profile.nome}</p>
-            <button onClick={()=> handleFollow(profile.id)}>
+            <Button onClick={()=> handleFollow(profile.id)}>
                 {profile.seguindo ? "Seguindo" : "Seguir"}
-            </button>
+            </Button>
         </Container>
     );
 };

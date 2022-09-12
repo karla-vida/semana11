@@ -17,12 +17,3 @@ export const ContentTitle = styled.div`
 export const Title = styled.h1`
 color: ${({theme})=>theme.colors.primary};
 `;
-
-export const Button = styled.button`
-background-color: ${({theme})=>theme.colors.secundary};
-color: ${({theme})=>theme.colors.primary};
-cursor: pointer;
-padding: ${({theme})=>theme.spacing.md};
-border: none;
-border-radius:${({theme})=>theme.spacing.sm};
-`;
