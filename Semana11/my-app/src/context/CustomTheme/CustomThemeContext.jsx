@@ -1,1 +1,2 @@
-export {CustomThemeContext} from "./CustomThemeContext";
+import {createContext} from "react";
+export const CustomThemeContext = createContext();

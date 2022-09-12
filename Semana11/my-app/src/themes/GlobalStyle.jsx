@@ -14,8 +14,8 @@ export const GlobalStyle = createGlobalStyle`
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color:${({theme})=>theme.colors.primary};
+  background-color: ${({theme})=>theme.colors.backgroundPrimary};
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;

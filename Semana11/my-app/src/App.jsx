@@ -1,16 +1,16 @@
-import { CustomThemeProvider } from "./context/CustomTheme"
+import { CustomThemeProvider } from "./context/"
 import { AppLayout } from "./layouts/App/AppLayout"
 import { GlobalStyle } from "./themes"
 
 function App() {
 
   return (
-    <CustomThemeProvider>
-      <GlobalStyle/>
+    <CustomThemeProvider>  
       <AppLayout>
+      <GlobalStyle/> 
        <p>Olá</p>
        </AppLayout>
-    </CustomThemeProvider>
+    </CustomThemeProvider>  
   )
 }
 
