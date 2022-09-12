@@ -1,7 +1,8 @@
 import { ThemeProvider } from 'styled-components';
 import {PerfilProvider, useCustomTheme} from '../../context';
-import { NavBar, Profile} from '../../components';
+import { NavBar} from '../../components';
 import { GlobalStyle } from "../../themes";
+import { ProfilePages } from '../../pages';
 
 export const AppLayout = ()=> {
     const {theme} = useCustomTheme();
@@ -9,7 +10,7 @@ export const AppLayout = ()=> {
          <GlobalStyle/> 
         <NavBar/>
         <PerfilProvider>
-        <Profile/>
+        <ProfilePages/>
         </PerfilProvider>
         </ThemeProvider>);
 }

@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-background-color: ${({theme})=>theme.colors.ba};
-padding: ${({theme})=>theme.spacing.xl};
+margin: ${({theme})=>theme.spacing.xl};
 display: flex;
 justify-content: space-between;
-width: 30%;
+flex-wrap: wrap;
+gap: ${({theme})=>theme.spacing.xl};
 `;

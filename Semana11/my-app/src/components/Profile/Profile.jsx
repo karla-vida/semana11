@@ -1,17 +1,20 @@
+import PropTypes from "prop-types";
 import { usePerfil } from "../../context";
+import {Container} from "./Profile.styles";
 
-export const Profile = () => {
-    const {profile, handleFollow} = usePerfil();
+export const Profile = (profile) => {
+    const {handleFollow} = usePerfil();
     return (
-        <>
-        {profile.map((p) => (   
-        <div key={p.id}>
-            <p>{p.nome}</p>
-            <button onClick={()=> handleFollow(p.id)}>
-                {p.seguindo ? "Seguindo" : "Seguir"}
+        <Container>
+            <p>{profile.nome}</p>
+            <button onClick={()=> handleFollow(profile.id)}>
+                {profile.seguindo ? "Seguindo" : "Seguir"}
             </button>
-        </div>
-        ))}
-         </>
+        </Container>
     );
 };
+
+Profile.propTypes = {
+    children: PropTypes.node,
+};
+
